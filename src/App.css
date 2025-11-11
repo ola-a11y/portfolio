@@ -1,0 +1,26 @@
+
+::-webkit-scrollbar {
+    width: 10px; 
+   
+  }
+   
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+  }
+
+  
+  ::-webkit-scrollbar-thumb {
+    background: #059669; 
+   
+    border-radius: 10px;
+  }
+  
+  /* عند تمرير الماوس فوق الشريط */
+  ::-webkit-scrollbar-thumb:hover {
+    background:  #047857; 
+  }
+html {
+  scroll-behavior: smooth;
+}
+  
