@@ -5,10 +5,20 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 exports.handler = async (event) => {
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+  let prompt = ""; 
   try {
-    const { prompt } = JSON.parse(event.body);
-
-    
+    if (event.body) {
+      const parsedBody = JSON.parse(event.body);
+      prompt = parsedBody.prompt;
+    }
+  } catch (e) {
+    console.error('Error parsing JSON body:', e);
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Invalid JSON format in request body." }),
+    };
+  }
+  try {
     const chatPrompt = `
       You are Ola's assistant, a professional and helpful chatbot for her portfolio.
       Your job is to answer questions about Ola's skills, projects, and provide *preliminary* (مبدئية) price and time estimates.
@@ -93,3 +103,5 @@ exports.handler = async (event) => {
     };
   }
 };
+
+
