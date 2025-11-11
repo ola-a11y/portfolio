@@ -11,9 +11,7 @@ This project is not just a static display page; it is a fully interactive web ap
 
 ## 🚀 Live Demo
 
-You can view and interact with the project live here:
-
-**[https://your-portfolio-link.netlify.app](https://your-portfolio-link.netlify.app)**
+**([https://your-portfolio-link.netlify.app](https://ola-mohammed-dev.netlify.app/))**
 
 
 ---
