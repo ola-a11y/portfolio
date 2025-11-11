@@ -4,23 +4,49 @@ import About from "./components/About.jsx";
 import Book from "./components/Book.jsx";
 import Footer from "./components/Footer.jsx";
 import Contact from "./components/Contact.jsx";
+import CodeChatbot from "./components/Chatbot.jsx";
+import Folder from "./components/Folder.jsx";
+import { useState } from 'react';
 
 function App() {
 
+  const [isChatbotVisible, setIsChatbotVisible] = useState(false);
+
+  const handleBotClick = (paperIndex) => {
+    if (paperIndex === 2) {
+
+      setIsChatbotVisible(true); 
+    }
+  };
+
+  const closeChatbot = () => {
+    setIsChatbotVisible(false);
+  };
 
   return (
-    <div className='dark:text-white'>
+    <div className='relative dark:text-white'>
       <Landing/>  
       <About/>
       <Book/>
       <Contact/>
       <Footer/>
-      <a href='https://wa.me/201100173142'>
-      <i className="fa-brands fa-whatsapp text-green-700 rounded-full text-[50px] fixed bottom-5 right-5"></i>
-      </a>
-      
+
+      <Folder 
+        className="text-[50px] fixed bottom-5 right-5 z-40"
+        closedIcon="fa-solid fa-address-book"
+        onPaperClick={handleBotClick} 
+      />
+
+      {isChatbotVisible && (
+        <div className="fixed bottom-24 right-5 z-50 animate-fade-in"> 
+          <CodeChatbot onClose={closeChatbot} /> 
+        </div>
+      )}
+
     </div>
   )
 }
 
 export default App
+
+
