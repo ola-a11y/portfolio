@@ -1,8 +1,8 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
 exports.handler = async (event) => {
+  // نقل عملية إنشاء النموذج إلى داخل الدالة لضمان قراءة المفتاح في كل استدعاء
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   let prompt = ""; 
@@ -13,11 +13,13 @@ exports.handler = async (event) => {
     }
   } catch (e) {
     console.error('Error parsing JSON body:', e);
+    // إذا فشل تحليل JSON نرجع 400
     return {
       statusCode: 400,
       body: JSON.stringify({ error: "Invalid JSON format in request body." }),
     };
   }
+
   try {
     const chatPrompt = `
       You are Ola's assistant, a professional and helpful chatbot for her portfolio.
@@ -96,12 +98,12 @@ exports.handler = async (event) => {
     };
 
   } catch (error) {
-    console.error(error);
+    console.error("Gemini API or Function execution failed:", error);
+    // إذا فشل الاتصال بالـ API أو حدث خطأ داخلي نرجع 500
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "Sorry, I can't think right now." }),
     };
   }
 };
-
 
