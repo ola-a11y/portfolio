@@ -3,7 +3,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 exports.handler = async (event) => {
   // نقل عملية إنشاء النموذج إلى داخل الدالة لضمان قراءة المفتاح في كل استدعاء
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   let prompt = ""; 
   try {
