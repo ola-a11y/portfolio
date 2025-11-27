@@ -16,10 +16,73 @@ function Book() {
 
     const projects = [
       {
+        live: 'https://chair-ecommerce.netlify.app/',
+        title: "Chair Ecommerce",
+        img: "image17.png",
+        github: "https://github.com/ola-a11y/hekto-ecommerce",
+        lang1: "#Html",
+        lang2: "#Css",
+        lang3: "#Java Script"
+      },
+      {
         live: 'https://booking-system-abf5f.web.app/',
         title: "Booking Appointment",
         img: "image14.png",
         github: "https://github.com/ola-a11y/Book-Appointment",
+        lang1: "#Html",
+        lang2: "#Tailwind",
+        lang3: "#React"
+      },
+       {
+        live: 'https://natures-glow-beauty.netlify.app/',
+        title: "Skincare store",
+        img: "image3.png",
+        github: "https://github.com/ola-a11y/store-project",
+        lang1: "#Html",
+        lang2: "#Tailwind",
+        lang3: "#React"
+      },
+      {
+        live: 'https://bee-kingdom.netlify.app/',
+        title: "Bee Kingdom",
+        img: "image19.png",
+        github: "https://github.com/ola-a11y/bee-project",
+        lang1: "#Html",
+        lang2: "#Tailwind",
+        lang3: "#React"
+      },   
+       {
+        live: "https://parallax-magic-scroll.netlify.app/",
+        title: "parallax scroll",
+        img: "image4.png",
+        github: "https://github.com/ola-a11y/Scrolling-Website",
+        lang1: "#Html",
+        lang2: "#Css",
+        lang3: "#Java Script"
+      }, 
+      {
+        live: 'https://template2-c824c.web.app',       
+        title: "template",
+        img: "image2.png", 
+        github: "https://github.com/ola-a11y/HTML-CSS-Template",
+        lang1: "#Html",
+        lang2: "#Css",
+        lang3: "#",
+      },  
+      {
+        live: 'https://dashboard-e8df4.web.app',
+        title: "Dashboard",
+        img: "image11.png",
+        github: "https://github.com/ola-a11y/dashboard",
+        lang1: "#Html",
+        lang2: "#Tailwind",
+        lang3: "#React"
+      },         
+      {
+        live: "https://accio-f7b42.web.app",
+        title: "Platform",
+        img: "image12.png",
+        github: "",
         lang1: "#Html",
         lang2: "#Tailwind",
         lang3: "#React"
@@ -32,43 +95,7 @@ function Book() {
         lang1: "#Html",
         lang2: "#Css",
         lang3: "#Java Script"
-      },
-      {
-        live: '#',
-        title: "store",
-        img: "image3.png",
-        github: "https://github.com/ola-a11y/store-project",
-        lang1: "#Html",
-        lang2: "#Tailwind",
-        lang3: "#React"
-      },
-      {
-        live: "https://parallax-magic-scroll.netlify.app/",
-        title: "parallax scroll",
-        img: "image4.png",
-        github: "https://github.com/ola-a11y/Scrolling-Website",
-        lang1: "#Html",
-        lang2: "#Tailwind",
-        lang3: "#React"
-      },
-      {
-        live: "https://accio-f7b42.web.app",
-        title: "Platform",
-        img: "image12.png",
-        github: "",
-        lang1: "#Html",
-        lang2: "#Tailwind",
-        lang3: "#React"
-      },
-      {
-        live: 'https://template2-c824c.web.app',       
-        title: "template",
-        img: "image2.png", 
-        github: "https://github.com/ola-a11y/HTML-CSS-Template",
-        lang1: "#Html",
-        lang2: "#Css",
-        lang3: "#",
-      },      
+      },    
       {
         live: 'https://portfolio2-50bf2.web.app',
         title: "Portfolio",
@@ -78,20 +105,21 @@ function Book() {
         lang2: "#CSS",
         lang3: "#Java Script"
       },
-      {
-        live: 'https://dashboard-e8df4.web.app',
-        title: "Dashboard",
-        img: "image11.png",
-        github: "https://github.com/ola-a11y/dashboard",
-        lang1: "#Html",
-        lang2: "#Tailwind",
-        lang3: "#React"
-      },
+
       
       
     ];
 
     const files = [
+        {
+          live:'https://plan-io-app.netlify.app/',
+          title: "plan.io App",
+          img: "image18.png",
+          github: "https://github.com/ola-a11y/plan-io-app",
+          lang1: "#Html",
+          lang2: "#Tailwind",
+          lang3: "#React"
+        },
         {
           live:'https://crud-93c15.web.app',
           title: "System Crud",
@@ -129,6 +157,15 @@ function Book() {
           lang3: "#Java Script"
         },
         {
+          live:'https://calculator-803cd.web.app',
+          title: "Calculator",
+          img: "image5.png",
+          github: "https://github.com/ola-a11y/calculator",
+          lang1: "#Html",
+          lang2: "#Css",
+          lang3: "#Java Script"
+        },
+        {
           live:'https://chat-636ff.web.app',
           title: "Chat",
           img: "image8.png",
@@ -146,15 +183,7 @@ function Book() {
           lang2: "#Css",
           lang3: "#Java Script"
         },
-        {
-          live:'https://calculator-803cd.web.app',
-          title: "Calculator",
-          img: "image5.png",
-          github: "https://github.com/ola-a11y/calculator",
-          lang1: "#Html",
-          lang2: "#Css",
-          lang3: "#Java Script"
-        },
+
        
         
       ];
